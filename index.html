@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./layui/src/css/layui.css">
+	<script src="./JS/jquery.min.js"></script>
+	<script src="./layui/src/layui.js"></script>
+</head>
+<body>
+<ul class="layui-nav" lay-filter="">
+  <li class="layui-nav-item"><a href="">最新活动</a></li>
+  <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+  <li class="layui-nav-item"><a href="">大数据</a></li>
+  <li class="layui-nav-item">
+    <a href="javascript:;">解决方案</a>
+    <dl class="layui-nav-child"> <!-- 二级菜单 -->
+      <dd><a href="">移动模块</a></dd>
+      <dd><a href="">后台模版</a></dd>
+      <dd><a href="">电商平台</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="">社区</a></li>
+</ul>
+	<button  id="btn" class="layui-btn layui-btn-radius layui-btn-small">默认按钮</button>
+</body>
+</html>
+
+
+<script>
+	layui.use(['layer','form','element'],function(){
+		var layer = layui.layer;
+		var element = layui.element;
+		$('#btn').on("click",function(){
+			layer.msg("Hello World")
+
+			/*var index = layer.load(2);
+			setTimeout(function(){
+			layer.close(index)
+		},1500)*/
+
+		});
+		
+
+	})
+</script>
